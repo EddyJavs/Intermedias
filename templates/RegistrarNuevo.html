@@ -1,0 +1,18 @@
+{%extends 'index.html' %}
+{%block Encabezado %}
+<button onclick="location.href='/Inicio/'">Atras</button>
+{%endblock%}
+{%block content %}
+			
+			
+			<form method="POST" action="(%url 'index'%)">{%csrf_token%}
+				<p class="p1"><span>Ingrese los datos del nuevo empleado: </span></p>
+				{{form.as_p}}
+				<input type="submit" value="Registrar nuevo">
+			
+				
+							
+			</form>
+			
+
+{%endblock%}

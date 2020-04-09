@@ -1,0 +1,18 @@
+{%extends 'index.html' %}
+
+{%block content %}
+			<h3><span>Login</span></h3>
+			<p class="p1"><span>Para iniciar sesion ingrese su correo y su contrasena: </span></p>
+			<form method="POST" action="(%url 'index'%)">{%csrf_token%}
+				{{form.as_p}}
+				<input type="submit" value="Enviar">
+				{% if bandera == "0"  %}
+				<p class="p1"><span>Usuario o contrasena incorrectos </span></p>
+				{% elif bandera == "3"%}
+				<p class="p1"><span> </span></p>
+				{% endif %}
+			</form>
+			<p class="p1"><span>Si no ha creado una cuenta de click en Registrarse </span></p>
+			<button onclick="location.href='/Registro/'">Registrarse</button>
+
+{%endblock%}
