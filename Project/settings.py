@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'Project.wsgi.application'
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/eddy/Documentos/ProyectoIntermedias/Project/test.db',
+        'NAME': 'test.db',
     }
 }
 
