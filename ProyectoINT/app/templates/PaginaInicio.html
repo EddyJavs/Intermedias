@@ -1,0 +1,56 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Usac Music: Principal usuario</title>
+  <meta charset="UTF-8">
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'styles/form_style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{% static 'styles/form_style.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'styles/layout.css' %}" type="text/css">
+  <!--[if lt IE 9]><script src="{% static 'scripts/html5shiv.js' %}"></script><![endif]-->
+</head>
+
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    
+    <div id="hgroup">
+      <h1><a>PAGINA INCIO</a></h1>
+    </div>
+    <!--Botones para registrarse e inciar sesion-->
+    <nav>
+        <ul>
+          <li class="last"><a href="/Logout">Logout</a></li>
+        </ul>
+      </nav>
+  </header>
+</div>
+
+<div class="wrapper row2">
+<nav>
+  <div class="collapse navbar-collapse">
+    <h3>Registros</h3>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/RegistroUsuario">Usuario</a></li>
+      <li class="active"><a href="/RegistroCliente">Cliente</a></li>
+      <li class="active"><a href="/RegistroCategoria">Categoria</a></li>
+      <li class="active"><a href="/RegistroProducto">Producto</a></li>
+      <li class="active"><a href="/RegistroSede">Sede</a></li>
+      <li class="active"><a href="/RegistroBodega">Bodega</a></li>
+      <li class="active"><a href="/RegistroVenta">Venta</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+<div class="wrapper row2">
+    {% block contenido %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
